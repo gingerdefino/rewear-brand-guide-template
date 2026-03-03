@@ -1,7 +1,7 @@
 export const brandSettings = {
     logo: {
         src: "", // Add logo image URL here (e.g., "/assets/logo.png")
-        alt: "[Brand Name]",
+        alt: "[Re:Wear]",
         variations: [ // you might have wordmarks / different color variants than what is listed here, that's fine just adjust it
             { 
                 name: "Primary - Light Background", 
