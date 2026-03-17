@@ -14,7 +14,7 @@ import { brandSettings } from '../../scripts/brandSettings.js';
                 <ColorSwatch />
 
                 <h3>Color Usage Policy</h3>
-                <p><strong>Use of Color:</strong> [Define your brand's policy on relying solely on color to convey meaning, state, or information (e.g., in error states or links). Assume your user is marketing and design team membrs who might not have any prior accessibility knowledge.]</p>
+                <p><strong>Use of Color:</strong> Color should never be the only way we share important information with our audience. Some of our users are colorblind, have low vision, or use screens that show color differently, so if we rely on color alone, some people will miss key information entirely. For example, if a form field turns red to show an error, always pair that with a written message like "This field is required" so the meaning is clear to everyone. The same goes for links in body text, which should always be underlined or labeled, not just colored differently. <br><br>A good rule of thumb is to ask yourself: if this design were printed in black and white, would the meaning still be clear? If the answer is no, add a written label or icon to support the color so that every Re:Wear user gets the same experience regardless of how they see color.</p>
 
                 <h3>Text Contrast Playground</h3>
                 <p>According to WCAG 2.1 AA standards, normal text (smaller than 18pt or 14pt bold) requires a minimum contrast ratio of 4.5:1 against its background. Large text (18pt and above, or 14pt bold and above) requires a minimum contrast ratio of 3:1. Meeting these standards ensures that your content is readable for people with low vision or color blindness. The tool below lets you check whether your brand colors meet these requirements. Enter your text color and background color to instantly see your contrast ratio and whether it passes or fails WCAG 2.1 AA standards. Use it to test any color combination you plan to use on your website, printed materials, or social graphics so that Re:Wear Hudson Valley content is easy to read for everyone in your community.</p>
@@ -87,10 +87,10 @@ import { brandSettings } from '../../scripts/brandSettings.js';
                 <p>According to WCAG 2.1 AA standards, interactive components such as buttons, input field borders, and icons require a minimum contrast ratio of 3:1 against their adjacent background colors. This applies to the visual boundary or indicator that identifies the component, meaning the border or outline of a button or text input needs to be distinguishable from the background around it. This ensures that users with low vision can identify where to click, tap, or type without relying on color alone. Note that this standard applies to the component's boundary against its background, not the text inside the component, which still follows the 4.5:1 rule for normal text.</p>
 
                 <h3>Inline Links</h3>
-                <p>[Define the visual style for inline links to ensure they are clearly identifiable within content.]</p>
+                <p>All inline links within body content must be clearly identifiable without relying on color alone. Links should stand out from surrounding text so that every user, including those with low vision or color blindness, can spot them easily.</p>
                 <ul>
-                    <li><strong>Text Decoration:</strong> [Specify if links are underlined. WCAG recommends underlines so links are distinguishable by more than just color.]</li>
-                    <li><strong>Color Contrast:</strong> [Ensure link color meets 4.5:1 contrast against the background.]</li>
-                    <li><strong>Hover & Focus:</strong> [Describe the visual change on interaction (e.g., darker shade, background highlight) to indicate interactivity.]</li>
+                    <li><strong>Text Decoration:</strong> All inline links must be underlined at all times, including in their default, hover, and focus states. Underlining is the most universally recognized signal that text is clickable and ensures links are distinguishable from regular body text by more than just color alone.</li>
+                    <li><strong>Color Contrast:</strong> All link text must meet a minimum contrast ratio of 4.5:1 against its background color. </li>
+                    <li><strong>Hover & Focus:</strong> When a user hovers over a link with their mouse, the link color must shift to the Re:Wear primary maroon to signal interactivity. When a user navigates to a link using a keyboard or assistive technology, a light blue focus ring must appear visibly around the link so keyboard users always know where they are on the page.</li>
                 </ul>
             </section>
