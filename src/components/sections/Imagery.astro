@@ -10,24 +10,50 @@ import InstructionNote from '../InstructionNote.astro';
 
     <h3>Multimedia Policies</h3>
     <ul>
-        <li><strong>Text in Images:</strong> [Define your policy regarding text embedded directly into images vs. rendered in code]</li>
-        <li><strong>Video & Audio:</strong> [Define your accessibility requirements for video captions and audio transcripts]</li>
-        <li><strong>Motion Control:</strong> [Define your rules and restrictions for flashing, blinking, or auto-playing content]</li>
+        <li><strong>Text in Images:</strong> Avoid embedding text directly into images whenever possible. Text inside an image cannot be resized, translated, or read by a screen reader, which makes it inaccessible to many users. Always render text in code so it can be scaled, selected, and read by assistive technology. If text must appear inside an image, for example in a promotional graphic or social media post, the same text must also appear as a visible caption or in the alt text of the image so no information is lost.</li>
+        <li><strong>Video & Audio:</strong> All Re:Wear videos must include accurate closed captions that are timed to match the spoken content and include descriptions of any important background sounds.  Any content that is shared in audio-only format must also be available as a written transcript. Transcripts should be posted alongside the audio file, not hidden behind an extra click or link.</li>
+        <li><strong>Motion Control:</strong> Do not use flashing or strobing visuals in any Re:Wear content, as these can trigger seizures in users with photosensitive epilepsy. Avoid auto-playing video or audio without user consent. Animations and moving elements should be subtle and purposeful, and any animation that lasts longer than five seconds must include a way for the user to pause, stop, or hide it. Always follow the reduced motion preference setting, meaning if a user has turned off animations on their device, Re:Wear content should respect that setting and display a still version instead.</li>
     </ul>
 
     <h3>Alt-Text Style Guide</h3>
     <div class="image-grid">
         <div>
-            <div class="placeholder-box" style="min-height: 200px;">
-                [Image 1 Placeholder]
+            <div class="placeholder-box image-frame" style="min-height: 200px;">
+                <img
+                    src="index-graphics-04.png"
+                    alt="A woman holds up a bright red and pink floral dress at a clothing swap. A rack of secondhand clothes stands behind her."
+                    class="image-sample"
+                >
             </div>
-            <p><strong>Alt-Text:</strong> "[Write descriptive alt text here for a complex/functional image]"</p>
+            <p><strong>Alt-Text:</strong> "A woman holds up a bright red and pink floral dress at a clothing swap. A rack of secondhand clothes stands behind her."</p>
         </div>
         <div>
-            <div class="placeholder-box" style="min-height: 200px;">
-                [Image 2 Placeholder]
+            <div class="placeholder-box image-frame" style="min-height: 200px;">
+                <img
+                    src="crop-hv-sew-2.png"
+                    alt="A view from above of a lake and fall forest in the Hudson Valley, with a gold thread and needle illustration layered over the photo."
+                    class="image-sample image-sample--crop-left"
+                >
             </div>
-            <p><strong>Alt-Text:</strong> "[Write descriptive alt text here for a decorative/ambient image]"</p>
+            <p><strong>Alt-Text:</strong> "A view from above of a lake and fall forest in the Hudson Valley, with a gold thread and needle illustration layered over the photo."</p>
         </div>
     </div>
 </section>
+
+<style>
+    .image-frame {
+        overflow: hidden;
+    }
+
+    .image-sample {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .image-sample--crop-left {
+        object-position: right center;
+    }
+</style>

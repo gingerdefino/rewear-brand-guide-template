@@ -4,33 +4,34 @@ import InstructionNote from '../InstructionNote.astro';
 <section id="ux-content">
     <h2>UX & Content Design</h2>
     
-    <InstructionNote>
-        Define the structural rules for how interactive elements and digital content should be designed to support assistive technologies.
-    </InstructionNote>
 
     <h3>Visual UI States</h3>
 
     <h4>Text Links</h4>
     <p>Links must be distinguishable by more than just color. <strong>Default:</strong> Underlined.</p>
     <div style="padding: 1.5rem; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; background-color: #f9f9f9;">
-        <p style="margin: 0;">This is a paragraph containing a <a href="#" style="text-decoration: underline; color: inherit;"><strong>text link</strong></a> to demonstrate the default state.</p>
+        <p style="margin: 0;">This is a paragraph containing a <a href="#" style="text-decoration: underline; color: #402F8E;"><strong>text link</strong></a> to demonstrate the default state.</p>
     </div>
 
     <h4>Button States</h4>
     <p>Buttons must have a highly visible focus indicator (e.g., outline) for keyboard navigation.</p>
-    <div style="padding: 1.5rem; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; background-color: #f9f9f9;">
-        <button style="padding: 0.5rem 1rem; font-size: 1rem; background: #ffffff; border: 2px solid #333333; outline: 3px solid #000000; outline-offset: 2px;">Focused Button</button>
+    <div style="padding: 1.5rem; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; background-color: #f9f9f9; border-radius: 1rem;">
+        <button
+            style="padding: 0.5rem 1rem; font-size: 1rem; background: #4A1719; border: 2px solid #4A1719; border-radius: 9999px; outline: 3px solid #7B77D9; outline-offset: 2px; color: #ffffff;"
+        >
+            Focused Button
+        </button>
     </div>
 
     <h4>Touch Targets</h4>
     <p>Interactive elements must have a target size of at least 44x44 CSS pixels to accommodate touch inputs.</p>
     <div style="padding: 1.5rem; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; background-color: #f9f9f9;">
-        <div style="width: 44px; height: 44px; background-color: #333333; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">44px</div>
+        <div style="width: 44px; height: 44px; background-color: #402F8E; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">44px</div>
     </div>
 
     <h3>Structure & Semantics</h3>
     <ul>
-        <li><strong>Form Labels:</strong> [Define your policy on form labeling, including the use of placeholder text vs. persistent labels]</li>
-        <li><strong>Heading Structure:</strong> [Define your rules for using semantic heading tags (H1-H6) to structure content]</li>
+        <li><strong>Form Labels:</strong> Every form field must have a visible label placed above the input box. Labels must always stay visible, even after a user clicks into the field and starts typing. Placeholder text, which is the gray hint text that appears inside a field before you type, can be used as an extra hint but must never be used as a replacement for a label.</li>
+        <li><strong>Heading Structure:</strong> Every page must have one H1 that tells the user what the page is about. Use H2 for the main sections on that page, and H3 for any subsections within those. Never skip a level, for example do not jump from an H2 directly to an H4, as this can confuse screen readers and make the page harder to navigate. Do not use heading tags just to make text look bigger or bold. Headings should only be used to organize content, not for visual styling. If you need text to stand out without it being a real section heading, use bold or a styled paragraph instead.</li>
     </ul>
 </section>
