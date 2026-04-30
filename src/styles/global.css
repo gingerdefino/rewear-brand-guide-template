@@ -49,6 +49,17 @@
         --link-hover-bg: #1a2733;
         --link-active-bg: #1c3146;
         --link-active-color: #74c0fc;
+        --demo-container-bg: #2a2a2a;
+        --demo-border-color: #444444;
+}
+
+/* Logo visibility toggle */
+[data-theme="dark"] .logo-light-mode {
+    display: none !important;
+}
+
+[data-theme="dark"] .logo-dark-mode {
+    display: block !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,6 +82,8 @@
         --link-hover-bg: #1a2733;
         --link-active-bg: #1c3146;
         --link-active-color: #74c0fc;
+        --demo-container-bg: #2a2a2a;
+        --demo-border-color: #444444;
     }
 }
 
@@ -525,6 +538,33 @@ th {
 
 .theme-toggle:hover {
     background-color: var(--table-header-bg);
+}
+
+/* Demo Container Styles for UX & Content Design Section */
+.demo-container {
+    padding: 1.5rem;
+    border: 1px solid var(--demo-border-color, #e0e0e0);
+    margin-bottom: 1.5rem;
+    background-color: var(--demo-container-bg, #f9f9f9);
+    border-radius: 1rem;
+}
+
+[data-theme="light"] .demo-container {
+    background-color: #f9f9f9;
+    border-color: #e0e0e0;
+}
+
+[data-theme="dark"] .demo-container {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+[data-theme="dark"] .logo-light-mode {
+    display: none !important;
+}
+
+[data-theme="dark"] .logo-dark-mode {
+    display: block !important;
 }
 
 [data-theme="dark"] .theme-icon-dark { display: none; }

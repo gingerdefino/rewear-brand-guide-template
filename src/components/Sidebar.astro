@@ -5,7 +5,10 @@ import { brandSettings } from '../scripts/brandSettings.js';
     <header class="sidebar-header">
         <div class="brand">
             {brandSettings.logo.src ? (
-                <img src={brandSettings.logo.src} alt={brandSettings.logo.alt} style="max-width: 150px; height: auto; margin-bottom: 1rem;" />
+                <>
+                    <img class="logo-light-mode" src={brandSettings.logo.src} alt={brandSettings.logo.alt} style="max-width: 150px; height: auto; margin-bottom: 1rem;" />
+                    <img class="logo-dark-mode" src={brandSettings.logo.variations.find(v => v.name === "Monochrome - White")?.src || 'white-logo.png'} alt={brandSettings.logo.alt} style="max-width: 150px; height: auto; margin-bottom: 1rem; display: none;" />
+                </>
             ) : (
                 <div class="placeholder-box logo-placeholder">
                     [Brand Logo Image Placeholder]
